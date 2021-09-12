@@ -7,7 +7,9 @@ wget http://ftp.vim.org/ftp/gnu/glibc/glibc-2.14.tar.gz
 tar xvf glibc-2.14.tar.gz
 rpm -ivh *.rpm
 cd glibc-2.14
-./configure
+mkdir -p build
+cd build
+.././configure --prefix '/usr'
 make -j8
 make install
 yum update
